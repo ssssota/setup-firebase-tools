@@ -9,13 +9,15 @@ export async function run() {
 	const platform = getPlatform();
 	const binUrl = getBinaryUrl(platform, inputs.version);
 	core.info(`Download binary from ${binUrl} ...`);
-	const binPath = await tc.downloadTool(binUrl);
-	core.info(`Complete download to ${binPath} ...`);
-	const binDir = path.dirname(binPath);
+	const binDir = await tc.downloadTool(binUrl);
+	core.info(`Complete download to ${binDir} ...`);
+	const [binFile] = await fs.readdir(path.dirname(binDir));
+	const binPath = path.join(binDir, binFile);
 	const scriptPath = path.join(
 		binDir,
 		"firebase", // platform === "win" ? "firebase.bat" : "firebase",
 	);
+	core.info(`Create wrapper script to ${scriptPath} ...`);
 	const script = createScript(binPath, inputs.firebaseServiceAccount);
 	await fs.writeFile(scriptPath, script);
 	core.addPath(scriptPath);
