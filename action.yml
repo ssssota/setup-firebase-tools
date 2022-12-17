@@ -1,0 +1,12 @@
+name: Setup Firebase CLI
+description: Setup Firebase CLI with auth settings.
+author: TOMIKAWA Sotaro (ssssota)
+inputs:
+  version:
+    description: Version of Firebase CLI.
+    default: latest
+  firebaseServiceAccount:
+    description: JSON of Firebase service account
+runs:
+  using: node16
+  main: dist/index.js

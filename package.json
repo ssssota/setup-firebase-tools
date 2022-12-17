@@ -1,0 +1,21 @@
+{
+  "name": "setup-firebase-cli",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "esbuild --minify --bundle --platform=node --outfile=dist/index.js src/setup-firebase-cli.ts",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/http-client": "^2.0.1",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.16",
+    "esbuild": "^0.16.8",
+    "husky": "^8.0.0",
+    "rome": "^11.0.0"
+  },
+  "packageManager": "pnpm@7.18.2"
+}
