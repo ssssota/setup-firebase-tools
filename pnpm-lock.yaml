@@ -5,17 +5,21 @@ specifiers:
   '@actions/http-client': ^2.0.1
   '@actions/tool-cache': ^2.0.1
   '@types/node': ^18.11.16
+  '@types/uuid': ^9.0.0
   esbuild: ^0.16.8
   husky: ^8.0.0
   rome: ^11.0.0
+  uuid: ^9.0.0
 
 dependencies:
   '@actions/core': 1.10.0
   '@actions/http-client': 2.0.1
   '@actions/tool-cache': 2.0.1
+  uuid: 9.0.0
 
 devDependencies:
   '@types/node': 18.11.16
+  '@types/uuid': 9.0.0
   esbuild: 0.16.8
   husky: 8.0.2
   rome: 11.0.0
@@ -306,6 +310,10 @@ packages:
     resolution: {integrity: sha512-6T7P5bDkRhqRxrQtwj7vru+bWTpelgtcETAZEUSdq0YISKz8WKdoBukQLYQQ6DFHvU9JRsbFq0JH5C51X2ZdnA==}
     dev: true
 
+  /@types/uuid/9.0.0:
+    resolution: {integrity: sha512-kr90f+ERiQtKWMz5rP32ltJ/BtULDI5RVO0uavn1HQUOwjx0R1h0rnDYNL0CepF1zL5bSY6FISAfd9tOdDhU5Q==}
+    dev: true
+
   /esbuild/0.16.8:
     resolution: {integrity: sha512-RKxRaLYAI5b/IVJ5k8jK3bO2G7cch2ZIZFbfKHbBzpwsWt9+VChcBEndNISBBZ5c3WwekFfkfl11/2QfIGHgDw==}
     engines: {node: '>=12'}
@@ -374,5 +382,10 @@ packages:
 
   /uuid/8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
     hasBin: true
     dev: false
