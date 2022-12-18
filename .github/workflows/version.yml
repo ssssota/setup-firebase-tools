@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: choice
+        options: [major, minor, patch]
+        default: patch
+
+jobs:
+  bumpup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - run: npm version ${{ inputs.version }}
+      - name: Sync tags
+        run: git push && git push origin --tags
