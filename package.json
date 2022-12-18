@@ -1,12 +1,12 @@
 {
-  "name": "setup-firebase-cli",
+  "name": "setup-firebase-tools",
   "private": true,
   "version": "0.1.1",
   "scripts": {
     "lint": "rome check src",
     "fmt": "rome format src",
     "check": "rome ci src",
-    "build": "esbuild --minify --bundle --platform=node --outfile=dist/index.js src/setup-firebase-cli.ts",
+    "build": "esbuild --minify --bundle --platform=node --outfile=dist/index.js src/setup-firebase-tools.ts",
     "prepare": "husky install"
   },
   "dependencies": {
