@@ -1,6 +1,9 @@
 name: Setup Firebase CLI
 description: Setup Firebase CLI with auth settings.
 author: TOMIKAWA Sotaro (ssssota)
+branding:
+  color: blue
+  icon: package
 inputs:
   version:
     description: Version of Firebase CLI.
