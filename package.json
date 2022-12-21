@@ -1,7 +1,7 @@
 {
   "name": "setup-firebase-tools",
   "private": true,
-  "version": "0.2.0",
+  "version": "1.0.0",
   "scripts": {
     "lint": "rome check src",
     "fmt": "rome format src",
